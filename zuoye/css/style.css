@@ -1,0 +1,18 @@
+body{
+	font:12px Arial;
+	color: gray;
+	line-height: 2em;
+}
+a{
+	color: #727272;
+	text-decoration:none;
+}
+a:hover { text-decoration:underline;}
+#m{color: #b9f605;
+	font-size: 14px;
+	font-weight: bold;
+}
+.white{color: white;}
+#m a:hover {text-decoration: none;
+	            color: #b9f605;}
+.special{color: #fdb306;}
