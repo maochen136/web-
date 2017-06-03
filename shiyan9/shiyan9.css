@@ -1,0 +1,5 @@
+.image{float: left;}
+.desc{text-align: center;font-size: 14px}
+a:hover img{opacity:1.0;}
+div.image img{display: inline;margin: 3px;border: 1px solid #bebebe;width: 200px;height: 160px;}
+div.image a:hover img{border: 1px solid #333333}
