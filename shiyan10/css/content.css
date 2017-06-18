@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* CSS Document */
+/*通用设置*/
+*{
+	margin:0px auto;
+	padding:0px;
+	font-size:12px;
+	list-style:none;
+	font-family: 宋体;
+	color:#522a06;}
+img{
+   border:0px;}
+body{
+	padding: 0px;
+	margin: 0px;
+	background:url(../images/bodybg.gif)}
+a{
+	color:#522a06;
+	text-decoration:none;}
+a:hover{
+	text-decoration:underline;}
+li{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	}
+.header{
+	width:100%;
+	height:164px;
+	background-image:url(../images/bg.gif);
+	background-position:center;}
+.banner{
+	width:1000px;
+	height: 164px;
+	margin:auto;}
+.banner img{
+	float:left;
+	margin-top:38px;
+	margin-left:25px;}
+.nav{
+	width:100%;
+	height:40px;
+	background-image:url(../images/nav.jpg);}
+.nav_body{
+	width:1000px;
+	text-align: center;
+	margin: 0 auto;}
+.nav_content{
+	float:left;
+	width:800px;
+	font-weight:bolder;
+	color:#FFF;}
+.nav_content ul{
+	width: 800px;
+	margin: 0px auto;}
+.nav_content ul li{
+	float: left; 
+	width: 85px;
+	line-height: 40px; 
+	text-align: center;
+	color:#FFF}
+.nav_content a{
+	color:#FFF;
+	width:65px;
+	line-height:40px;
+	font-weight:bold;
+	text-align:center;}
+.nav_content a:hover{
+	color:#f9f603;
+	text-decoration:none;}
+.col_wei a{
+	color:#f9f603;
+	width:45px;}
+.nav_search{
+	width:190px;
+	float:left;
+	padding:10px 0;}
+.search input{
+	width:140px;
+	height:19px;
+	float:left;
+	background-color:#f8f5ee;}
+.search_btn input{
+	width:44px;
+	height:21px;
+	float:left;
+	background-color:#000;
+	border:1px solid #f8f5ee;
+	color:#FFF;
+	margin-top:1px;}
+
+.content{
+	background-image:url(../images/bg.jpg);
+	background-repeat:repeat;
+	margin-bottom:10px;
+	width:1000px;
+	clear: both;}
+.bread{
+	height:40px;
+	line-height:40px;
+	vertical-align:middle;
+	padding-left:43px;
+	}
+.leftlist{
+	float: left;
+	width: 705px;
+	height: 706px;
+
+}
+.listleft{
+	float:left;
+	width:700px;
+	}
+.listleft h2{
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:16px;
+	border-bottom:1px solid #c9baa5;
+	}
+.listleft h3{
+	font-size:12px;
+	font-weight:normal;
+	color:#757575;
+	text-align:center;
+	margin:10px;
+	}
+.nr{
+	width: 700px;
+	float: left;
+	line-height:28px;
+	padding:10px;
+	border-bottom:1px solid #c9baa5;
+	font-size:14px;}
+.nr p{
+	margin-top:0px;
+	text-indent:2em;}
+.nr img{
+	margin-left:65px;}
+
+.next{
+	float: left;
+	height:40px;
+	line-height:40px;
+	margin-top:10px;
+	font-size:13px;}
+.next a{
+	margin-right:40px;
+	color:#844004;
+	font-size:13px;}
+
+.listright{
+	float:left;
+	margin-left:30px;
+	margin-top:0px;
+	height: 600px;
+	width:280px;} 
+.news{
+	border:1px solid #c9baa5;
+	background-image:url(../images/bg.png);
+	margin-bottom:20px;
+	padding-left: 35px;}
+.news ul li{
+	height:30px;
+	margin-left:-20px;}
+.mingjia{
+	float: right;
+	width: 278px;
+	height:440px;
+	margin-left: 30px;
+	margin-top:-10px;
+}
+.mingjia_bg{
+	background-image: url(../images/show_bg.png);
+	background-repeat: no-repeat;
+	background-size: 278px 417px;
+	float: right;
+	width: 278px;
+	margin-top: 20px;
+	height: 417px;
+}
+.show{
+	float: right;
+	width: 114px;
+	height: 23px;
+	margin-top: 20px;
+	margin-bottom: -20px;
+	margin-right: 80px;
+	background-repeat: no-repeat;
+	background-image: url(../images/show.png);
+}
+.ren{
+	background-image: url(../images/mingjia.jpg);
+	float: right;
+	width: 224px;
+	height: 187px;
+	margin-top: 25px;
+	margin-right: 28px;
+}
+.wenzi{
+	width: 224px;
+	float: right;
+	margin-top: 25px;
+	margin-right: 10px;
+	margin-left: 15px;
+	margin-right: 25px;
+	height: 25px;
+	line-height: 25px;
+}
+.wenzi a{
+	color:#b70000;
+	font-size: 14px;
+	font-weight: bold;
+}
+.mingjia_P{
+	float: left;
+	margin-top: 110px;
+	margin-left: 30px;
+}
+.footer {
+	background:url(../images/foot.gif);
+	background-repeat: no-repeat;
+	width: 100%;
+	margin-top: 700px;
+	background-position:center;	
+	position: absolute;
+	left: 0;
+	height:140px;
+	}
+.footer ul{
+	width: 600px;
+	height: 30px;
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 450px;
+}
+.footer ul li{
+
+	float: left;
+	list-style-type: none;
+	text-align: center;
+	width: 80px;
+	height: 30px;
+
+}
+.footer ul li a{
+
+	font-weight: bold;
+}
+.foot{
+	width: 550px;
+	border-top: 1px solid;
+}
+.foot p{
+	margin-left: 120px;
+	margin-top:10px
+	}
