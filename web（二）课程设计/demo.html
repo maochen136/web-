@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>金融之家</title>
+	<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+<!-- 页头部分 -->
+<div class="header">
+<!--logo图片-->
+<div class="logo"><img src="images/logo.png"><p>&nbsp;|&nbsp;&nbsp;欢迎注册</p>
+<div class="load"><p>我已注册，现在就&nbsp;<a href="#">登录</a></p></div>
+</div>
+<!--导航栏和搜索框-->
+<div class="nav">
+	<div class="nav_body">
+<!--导航栏-->
+	<div class="nav_content">
+			<ul>
+			 <li><a href="#" >首页</a></li>
+			 <li><a href="#">资讯</a>
+			 <ul>
+			 	<li><a href="#">全球</a></li>
+			 	<li><a href="#">基金</a></li>
+			 	<li><a href="#">P2P</a></li>
+			 </ul></li>
+			 <li><a href="#">原创</a>
+			 <ul>
+			    <li><a href="#">文章</a></li>
+			 	<li><a href="#">视频</a></li>
+			 	<li><a href="#">报道</a></li>
+			 </ul>
+			 </li>
+			 <li><a href="#">专栏</a>
+			 <ul>
+			    <li><a href="#">证券</a></li>
+			 	<li><a href="#">股票</a></li>
+			 	<li><a href="#">速贷</a></li>
+			 </ul>
+			 </li>
+			 <li><a href="#">数据</a>
+			  <ul>
+			    <li><a href="#">银行</a></li>
+			 	<li><a href="#">信托</a></li>
+			 	<li><a href="#">租赁</a></li>
+			 </ul>
+			 </li>
+			 <li><a href="#">社区</a>
+			 <ul>
+			    <li><a href="#">投资</a></li>
+			 	<li><a href="#">TED</a></li>
+			 	<li><a href="#">热评</a></li>
+			 </ul>
+			 </li>
+			 <li><a href="#">报告</a>
+			 <ul>
+			 	<li><a href="#">互金</a></li>
+			 	<li><a href="#">网贷</a></li>
+			 	<li><a href="#">电商</a></li>
+			 </ul>
+			 </li>
+			</ul>
+	</div>
+<!--搜索框-->
+        <div class="nav_search">
+			<div class="search">
+			<input type="text" name="text"/>
+			</div>
+			<div class="search_btn">
+			<input type="button"  value="搜索" name="button"/>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 主体部分 -->
+<div class="place"><p>当前位置>>用户注册</p></div>
+<div class="content">
+<table style="border-spacing:15px;">
+			<tr>
+				<td align="right"><p>用户名：</p></td>
+				<td><input type="text" name="username" /></td>
+			</tr>
+			<tr>
+				<td align="right"><p>密码：</p></td>
+				<td><input type="password" name="pswd" /></td>
+			</tr>
+			<tr>
+				<td align="right"><p>确认密码：</p></td>
+				<td><input type="password" name="repswd" /></td>
+			</tr>
+			<tr>
+				<td align="right"><p>邮箱：</p></td>
+				<td><input type="text" name="mail" /></td>
+			</tr>
+			<tr>
+				<td align="right"><p>手机号：</p></td>
+				<td><input type="text" name="phone" /></td>
+			</tr>
+			<tr>
+				<td align="right"><p>身份证号：</p></td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+			<td>
+			<p>项目爱好：</p>
+			<td>
+		    <input type="checkbox" class="item" value="足球" checked="checked"/>股票
+			<input type="checkbox" class="item" value="篮球"/>期货
+			<input type="checkbox" class="item" value="羽毛球"/>基金
+			<input type="checkbox" class="item" value="乒乓球"/>P2P
+			<input type="checkbox" id="CheckedAll" />全选/全不选
+			</td>
+			</tr>
+			<tr><td><input type="button" value="立即注册" style='height:33px;font-family: "微软雅黑"; font-size:16px ;background:#FF6347'></td>
+			<td  style="padding-left:75px;"><input type="button" value="我再想想" style='height:33px;font-family: "微软雅黑";font-size:16px ;background:#FF6347'></td></tr>
+		</table>
+		<img id="pic" src="images/0.png" width="370" height="270">;
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+		}
+		
+
+	$(document).ready(function(){
+			//检测用户名
+			$('input[name="username"]').blur(function(){
+				$(this).nextAll().html("");
+				if($(this).val() == ''){
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;用户名不能为空</font>');
+				}else{
+					$(this).nextAll().html("");
+				}
+			});
+			//检测密码
+			$('input[name="pswd"]').blur(function(){
+				$(this).nextAll().html("");
+				if($(this).val() == ''){
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;密码不能为空</font>');
+				}else{
+					$(this).nextAll().html("");
+				}
+			});
+			//检测确认密码
+			$('input[name="repswd"]').blur(function(){
+				$(this).nextAll().html("");
+				if($(this).val() != $('input[name="pswd"]').get(0).value){
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;两次输入的密码必须一致</font>');
+				}else{
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;密码一致</font>');
+				}
+			});
+			$('input[name="phone"]').blur(function(){
+				$(this).nextAll().html("");
+				if($(this).val() == ''){
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;手机号不能为空</font>');
+				}else{
+					$(this).nextAll().html("");
+				}
+			});
+			$('input[name="mail"]').blur(function(){
+				$(this).nextAll().html("");
+				if($(this).val() == ''){
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;邮箱不能为空</font>');
+				}else{
+					$(this).nextAll().html("");
+				}
+			});
+			$('input[name="id"]').blur(function(){
+				$(this).nextAll().html("");
+				if($(this).val() == ''){
+					$(this).parent().append('<font color="#FF6347">&nbsp;&nbsp;身份证号不能为空</font>');
+				}else{
+					$(this).nextAll().html("");
+				}
+			});
+			
+		});	
+	$(function(){
+	     		//全选
+	     		$("#CheckedAll").click(function(){
+					if(this.checked){				 
+						$('.item').each( function(){this.checked = true;});
+					}else{$('.item').each( function(){this.checked = false;});}
+		 		});
+		 		$('.item').click(function(){
+				   	var flag=true;
+	               	$('.item').each(function(){
+						if(!this.checked){flag = false;}
+				   	});
+				   	if( flag ){$('#CheckedAll')[0].checked = true;
+				   	}else{$('#CheckedAll')[0].checked = false;}
+		 		});
+		  		//输出值
+				$("#send").click(function(){
+					var str="你选中的是：\r\n";
+					$('.item:checked').each(function(){str+=$(this).val()+"\r\n";})
+					alert(str);});
+			})
+	//幻灯片变换
+	var i = 0;
+	var pic = document.getElementById("pic");
+	pic.onclick=function(){
+		i=(++i)%5;
+		pic.src="images/"+i+".png";
+		}
+
+</script>
+</body>
+</html>
